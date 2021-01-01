@@ -1,0 +1,1 @@
+worker: python marketing_twitter_bot.ipynb
