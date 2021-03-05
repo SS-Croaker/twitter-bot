@@ -61,7 +61,7 @@ class RetweetListener(tweepy.StreamListener):
         if (not tweet.retweeted) and ('RT @' not in tweet.text):
             
             try:
-                sleep_time = random.randrange(1800,3600,360)
+                sleep_time = random.randrange(600,1200,60)
                 print(sleep_time)
                                                
                 tweet.retweet()
