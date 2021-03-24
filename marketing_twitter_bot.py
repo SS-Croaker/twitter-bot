@@ -57,8 +57,8 @@ class RetweetListener(tweepy.StreamListener):
         
         # if not tweet.retweeted checks if my account has retweeted the tweet or not
         # if 'RT @' not in tweet.text check is the tweet is NOT a retweet
-        
-        if (not tweet.retweeted) and ('RT @' not in tweet.text):
+        favourites_count = tweet.favourites_count
+        if (not tweet.retweeted) and ('RT @' not in tweet.text) and (favourites_count > 100):
             
             try:
                 sleep_time = random.randrange(600,1200,60)
